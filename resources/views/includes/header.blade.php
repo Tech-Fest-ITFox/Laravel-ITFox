@@ -48,5 +48,8 @@
                         class="catg-title catg-title-ps"><span class="adobe">Adobe </span>Photoshop</span></a></li>
         <li class="cpp"><a href="#" title="C++"><span class="catg-icon icon-cpp"></span><span
                         class="catg-title catg-title-cpp">C++</span></a></li>
+        <li class="more"><a href="#" title="More"><span class="catg-icon icon-more"></span><span
+                        class="catg-title catg-title-more">Други<span></a></li>
+
     </ul>
 </div>

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.guest')
 
 @section('title')
     Login
@@ -23,6 +23,10 @@
                 <input type="password" name="password" class="input"/>
 
                 <div class="placeholder">Парола</div>
+            </div>
+            <div class="input-holder">
+                <input type="checkbox" id="remember" name="remember">
+                <label style="color: #fff" for="remember">Запомни ме</label>
             </div>
             <button type="submit" class="btn">Влез</button>
             <input type="hidden" name="_token" value="{{ Session::token() }}">

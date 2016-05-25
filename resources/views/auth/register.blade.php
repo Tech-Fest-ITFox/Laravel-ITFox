@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.guest')
 
 @section('title')
     Register
@@ -40,10 +40,10 @@
 
             </div>
             <div class="input-holder">
-                <label style="color: #fff;" for="">Ученик</label>
-                <input type="radio" name="role" value="Student">
-                <label style="color: #fff;" for="">Учител</label>
-                <input type="radio" name="role" value="Teacher">
+                <label style="color: #fff;" for="student">Ученик</label>
+                <input type="radio" id="student" name="role" value="Student">
+                <label style="color: #fff;" for="teacher">Учител</label>
+                <input type="radio" id="teacher" name="role" value="Teacher">
             </div>
             <div class="input-holder form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <input type="password" name="password" class="input" required/>

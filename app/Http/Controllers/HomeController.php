@@ -16,7 +16,6 @@ class HomeController extends Controller
             $userRole = null;
             foreach ($user->roles as $role) {
                 if($role->role == 'Student' || $role->role == 'Teacher') {
-                    echo 'In';
                     $userRole = $role->role;
                 }
             }

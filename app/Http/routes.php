@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => function () {
+        return view('welcome');
+    },
+    'middleware' => 'guest'
+]);
 
 // Registration Routes...
 Route::auth();
