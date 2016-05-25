@@ -15,19 +15,39 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('lesson', function () {
-    return view('lesson');
+// Registration Routes...
+Route::auth();
+$this->post('register', 'Auth\AuthController@register');
+
+$this->post('login', [
+    'uses' => 'Auth\AuthController@login',
+    'as' => 'login'
+]);
+
+Route::group(['middleware' => ['roles', 'auth']], function () {
+
+    Route::get('home', [
+        'uses' => 'HomeController@showHomePage',
+        'as' => 'home',
+        'roles' => ['Admin', 'Student', 'Teacher']
+    ]);
+
+    Route::get('lesson', function () {
+        return view('lesson');
+    });
+
 });
 
-//Route::get('/register', function() {
-//    return view('register');
-//});
-//
-//Route::get('/login', function() {
-//    return view('login');
-//});
 
-Route::auth();
 
-// Registration Routes...
-$this->post('register', 'Auth\AuthController@register');
+
+//Admin
+Route::group(['middleware' => ['roles', 'auth']], function () {
+
+    Route::get('/secret/admin/dashboard', [
+        'uses' => 'AdminController@showDashboard',
+        'as' => 'admin.dashboard',
+        'roles' => ['Admin']
+    ]);
+
+});

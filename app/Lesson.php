@@ -11,6 +11,11 @@ class Lesson extends Model
        return $this->belongsTo('App\Category');
     }
 
+    public function grade()
+    {
+        return $this->belongsTo('App\Grade');
+    }
+
     public function exercises()
     {
         return $this->hasMany('App\Exercise');

@@ -8,7 +8,7 @@
                     <img src="{{ asset('src/images/' . Auth::user()->image_path) }}" class="avatar" alt="">
                 </div>
                 <div class="user-name fleft">
-                    Християн Япраков <span class="flaticon stroke down-1"></span>
+                    {{ Auth::user()->name }} <span class="flaticon stroke down-1"></span>
                 </div>
             </div>
             <a href="{{ url('logout') }}">

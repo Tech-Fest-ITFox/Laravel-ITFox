@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Register
+@endsection
+
 @section('content')
     <div class="small-box clearfix">
         <a href="#" class="btn fb">Регистрирай се чрез <b>Facebook</b></a>
@@ -35,8 +39,15 @@
                 @endif
 
             </div>
+            <div class="input-holder">
+                <label style="color: #fff;" for="">Ученик</label>
+                <input type="radio" name="role" value="Student">
+                <label style="color: #fff;" for="">Учител</label>
+                <input type="radio" name="role" value="Teacher">
+            </div>
             <div class="input-holder form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <input type="password" name="password" class="input" required/>
+
                 <div class="placeholder">Парола</div>
                 <div class="err">Твърде кратка парола - трябва да е над 6 символа</div>
                 @if ($errors->has('password'))
@@ -57,6 +68,7 @@
                 @endif
             </div>
             <button type="submit" class="btn">Регистрирай се веднага</button>
+            <input type="hidden" name="_token" value="{{ Session::token() }}">
             <a href="#" class="assist-link fright nmr">или попълни и други данни</a>
         </form>
     </div>

@@ -15,6 +15,7 @@ class CreateLessonsTable extends Migration
         Schema::create('lessons', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id');
+            $table->integer('grade_id');
             $table->string('title');
             $table->string('author');
             $table->string('content');

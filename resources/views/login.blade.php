@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+    Login
+@endsection
+
 @section('content')
     <h1>Login</h1>
     <div class="small-box clearfix">
