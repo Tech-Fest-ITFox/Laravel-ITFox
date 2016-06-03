@@ -48,6 +48,13 @@ $(function(){
 		$(" .notification-trigger ").toggleClass( "white-bell" );
 	});
 
+
+	var dialogs = [
+		{ name: 'new_file', url: 'views/dialogs/register.html'},
+      	{ name: 'login', title: 'Вход', url: 'views/dialogs/login.html'} 
+    ];
+
+
 	$(" .dialog.moveable ").draggable({
 		handle: ".dialog-title"
 	});

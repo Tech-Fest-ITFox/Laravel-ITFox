@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('src/fonts/roboto-slab/stylesheet.css') }}"> <!-- fonts -->
     <link rel="stylesheet" href="{{ asset('src/fonts/icons/stroke.css') }}"> <!-- fonts -->
     <link rel="stylesheet" href="{{ asset('src/fonts/categories/css/categories.css') }}"> <!-- fonts -->
-
+    <link rel="stylesheet" href="{{ asset('src/fonts/fontawesome/css/font-awesome.css') }}"> <!-- fonts -->
 </head>
 <body>
 

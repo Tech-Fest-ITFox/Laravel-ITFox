@@ -20,7 +20,85 @@
             @endif
 
                     <!--      USER PANEL     -->
-            <div class="user-panel inactive"></div>
+            <div class="user-panel inactive">
+                <section class="profile clearfix">
+                    <h4>Профилни Данни</h4>
+                    <div class="avatar-holder big fleft">
+                        <img src="{{ asset('src/images/' . Auth::user()->image_path) }}" class="avatar" alt="">
+                    </div>
+                    <div class="fleft">
+                        @if( Auth::user()->grade != 0 && Auth::user()->class != '' && Auth::user()->school != '' && Auth::user()->city != '' )
+                            <p>
+                                {{ Auth::user()->roles{0}->role }} от <a href="#">{{ Auth::user()->grade }} {{ Auth::user()->class }}</a> клас <br>
+                                в <a href="#">{{ Auth::user()->school }}</a> <br>
+                                град {{ Auth::user()->city }} <br>
+                                e-mail: <a href="#">{{ Auth::user()->email }}</a> <br><br>
+                                <!-- учител по ИТ: <a href="#">Спаска Ангелова</a> -->
+                            </p>
+                        <a href="edit-user" class="btn">Промени информацията</a>
+                            @else
+                            <p>
+                                Имате незавършен профил. <br>
+                                <a href="edit-user">Попълнете профила си.</a> <br>
+                                e-mail: <a href="#">{{ Auth::user()->email }}</a> <br><br><br>
+                                <!-- учител по ИТ: <a href="#">Спаска Ангелова</a> -->
+                            </p>
+                        @endif
+                        <a href="edit-user" class="btn">Промени</a>
+                    </div>
+                </section>
+                <section class="profile-info-files clearfix">
+                    <h4>Файлове</h4>
+                    <ul class="files-listing">
+                        <li class="clearfix">
+                            <a href="#" class="clearfix">
+                                <div class="file-name"><i class="fa fa-file-text-o access-color"></i> name.accdb</div>
+                                <div class="file-size">1MB</div>
+                                <div class="file-date">08.08.2016</div>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="#" class="clearfix">
+                                <div class="file-name"><i class="fa fa-file-code-o html-color"></i> name.html</div>
+                                <div class="file-size">100KB</div>
+                                <div class="file-date">08.08.2016</div>
+                            </a>
+                        </li>
+                        <li class="clearfix">
+                            <a href="#" class="clearfix">
+                                <div class="file-name"><i class="fa fa-file-image-o ps-color"></i> name.jpeg</div>
+                                <div class="file-size">15MB</div>
+                                <div class="file-date">08.02.2016</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Качи нов файл</a>
+                        <a href="#" class="btn-company">Всички качени (23)</a>
+                    </div>
+                </section>
+                <section class="groups">
+                    <h4>Групи и Потребители</h4>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><a href="#">XI A</a></td>
+                            <td><a href="#" class="nostyle">Николай</a> и 14 други</td>
+                            <td><span class="legend">КЛАС</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">XI ПМГ</a></td>
+                            <td><a href="#" class="nostyle">Виктор</a> и 14 други</td>
+                            <td><span class="legend">ВИПУСК</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">ПМГ</a></td>
+                            <td>197 ученици</td>
+                            <td><span class="legend">УЧИЛИЩЕ</span></td>
+                        </tr>
+                    </table>
+                    <a href="#" class="btn-company db tac air-15-0">Виж всички твои групи</a>
+                </section>
+            </div>
 
     </div>
 

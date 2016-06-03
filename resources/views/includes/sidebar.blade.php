@@ -32,6 +32,13 @@
                 <li class="nav-border"></li>
                 <li class="nav-groups">
                     <ul class="side-nav">
+                        <li class="side-nav-items"><a href="files.html" class="side-nav-link">Файлове</a></li>
+                        <li class="side-nav-items"><a href="groups.html" class="side-nav-link">Групи</a></li>
+                    </ul>
+                </li>
+                <li class="nav-border"></li>
+                <li class="nav-groups">
+                    <ul class="side-nav">
                         <li class="side-nav-items"><a href="#" class="side-nav-link">Относно</a></li>
                         <li class="side-nav-items"><a href="#" class="side-nav-link">Контакти</a></li>
                     </ul>
