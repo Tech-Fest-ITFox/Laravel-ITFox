@@ -8,7 +8,7 @@
     <div class="small-box clearfix">
         <a href="#" class="btn fb">Регистрирай се чрез <b>Facebook</b></a>
         <h2>или</h2>
-        <form name="regForm" action="{{ url('register') }}" role="form" method="post">
+        <form name="regForm" action="{{ url('register') }}" role="form" method="post" class="clearfix">
             {!! csrf_field() !!}
             <div class="input-holder form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="email" name="email" class="input" required/>
@@ -102,7 +102,7 @@
             </div>
             <button type="submit" class="btn">Регистрирай се веднага</button>
             <input type="hidden" name="_token" value="{{ Session::token() }}">
-            <a href="#" class="assist-link fright nmr">или попълни и други данни</a>
         </form>
+        <a href="/" class="return db">Върни се назад</a>
     </div>
 @endsection

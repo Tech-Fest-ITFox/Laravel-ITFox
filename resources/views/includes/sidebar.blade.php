@@ -17,17 +17,17 @@
                     </ul>
                 </li>
                 <!--
-                <li class="nav-border"></li>
-                <li class="nav-groups">
-                    <ul class="side-nav">
-                        <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи файл</a></li>
-                        <li class="side-nav-items"><a href="#" class="side-nav-link">Качени файлове</a></li>
-                        <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи урок</a></li>
-                        <li class="side-nav-items"><a href="#" class="side-nav-link">Качени уроци</a></li>
-                        <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи тест</a></li>
-                        <li class="side-nav-items"><a href="#" class="side-nav-link">Качени тестове</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-border"></li>
+                    <li class="nav-groups">
+                        <ul class="side-nav">
+                            <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи урок</a></li>
+                            <li class="side-nav-items"><a href="#" class="side-nav-link">Качени уроци</a></li>
+                            <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> качи задача</a></li>
+                            <li class="side-nav-items"><a href="#" class="side-nav-link">Качени задачи</a></li>
+                            <li class="side-nav-items with-btns clearfix"><a href="#" class="btn"><span class="flaticon stroke upload-2"></span> създай проект</a></li>
+                            <li class="side-nav-items"><a href="#" class="side-nav-link">Всички проекти</a></li>
+                        </ul>
+                    </li>
                 -->
                 <li class="nav-border"></li>
                 <li class="nav-groups">

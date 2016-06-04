@@ -91,6 +91,7 @@ h5 {
 .top-section {
   height: 130px;
   position: fixed;
+  z-index: 100;
   right: 0;
   left: 200px;
   transition: left 0.5s;
@@ -105,6 +106,7 @@ h5 {
   width: 200px;
   height: 100%;
   position: fixed;
+  z-index: 100;
   left: 0;
   overflow: hidden;
   background: #2a2c2b;
@@ -667,6 +669,7 @@ i.fa {
   clear: both;
 }
 /* **** CONTENT **** */
+
 .dashboard-user {
   list-style: none;
   margin: 0;
@@ -950,11 +953,12 @@ i.fa {
   width: 1170px;
   margin: 0 auto;
   padding: 150px 0;
+
 }
 .input {
   width: 100%;
   position: relative;
-  z-index: 5;
+  z-index: 1;
   display: block;
   margin: 20px 0;
   padding: 10px 0;
@@ -986,6 +990,7 @@ i.fa {
 }
 .input-holder {
   position: relative;
+  z-index: 1;
 }
 .input-holder .placeholder {
   position: absolute;
@@ -1157,19 +1162,21 @@ i.fa {
 }
 .small-box.inside {
   width: 500px;
+}
+.inside {
   margin: 50px 0;
   padding: 0;
   background: inherit;
 }
-.small-box.inside input,
-.small-box.inside .placeholder,
-.small-box.inside label {
+.inside input,
+.inside .placeholder,
+.inside label {
   color: #2a2c2b;
 }
-.small-box.inside input {
+.inside input {
   border-bottom: 1px solid #2a2c2b;
 }
-.small-box.inside input:focus {
+.inside input:focus {
   border-bottom: 1px solid #ee7326;
 }
 .small-box .fb {
@@ -1226,6 +1233,25 @@ a.return {
   position: static;
   padding-bottom: 10px;
 }
+
+/*  TEXT EDITOR  */
+
+
+.fr-box {
+  margin: 20px 0;
+}
+.fr-toolbar {
+  border: none !important;
+}
+.fr-wrapper {
+  background: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #2A2C2B !important;
+}
+
+
+
+
 /* **** RESPONSIVE **** */
 @media (min-width: 993px) and (max-width: 1600px) {
   .catg-title {

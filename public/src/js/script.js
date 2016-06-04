@@ -1,4 +1,9 @@
 $(function(){
+
+
+
+
+	$('.text-editor').froalaEditor();
 	
 	$(" .side-bar-trigger ").on("click", function() {
 		$(" .side-bar, .top-section ").toggleClass("minimized");
@@ -53,13 +58,24 @@ $(function(){
 		{ name: 'new_file', title: 'Качи файл'},
       	{ name: 'login', title: 'Вход', url: 'views/dialogs/login.html'} 
     ];
-@include('includes.modals.register')
 
+	$('[data-dialog]').click(function(){
+
+		$.ajax({
+			url: 'login',
+			type: "post",
+			data: {'email':$('input[name=email]').val(), '_token': $('input[name=_token]').val()},
+		 	success: function(data){
+		    	alert(data);
+			}
+		});      
+	});
 	$(" .dialog.moveable ").draggable({
 		handle: ".dialog-title"
 	});
 	$(" [data-dialog] ").on("click", function() {
 		var dialog = $(" .dialog" );
+		var thisDialog = $(this).attr('data-dialog');
 		dialog.css('display', 'block');
 		dialog.animate({
 			top: "100",
@@ -79,13 +95,19 @@ $(function(){
 	});
 
 
-	$("body").on("focusin", " .input ", function() {
-		if( !$(this).val() ) {
+	$('.input').each( function(){
+        if( $(this).val() ) {
 			var plw = $(this).siblings(" .placeholder ").width() + 10;
 			$(this).siblings(" .placeholder ").css("width", plw).animate({
 				left: (480 - plw)
 			}, 400, "easeOutBack");
 		}
+    });
+	$("body").on("focusin", " .input ", function() {
+		var plw = $(this).siblings(" .placeholder ").width() + 10;
+		$(this).siblings(" .placeholder ").css("width", plw).animate({
+			left: (480 - plw)
+		}, 400, "easeOutBack");
 	});
 	$("body").on("focusout", " .input ", function() {
 		if( !$(this).val() ) {

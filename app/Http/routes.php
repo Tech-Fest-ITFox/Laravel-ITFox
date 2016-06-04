@@ -47,6 +47,41 @@ Route::get('edit-user', function () {
     return view('edit-user');
 });
 
+Route::get('add-lesson', function () {
+    return view('add-lesson');
+});
+
+Route::get('edit-lesson', function () {
+    return view('edit-lesson');
+});
+
+Route::get('delete-lesson', function () {
+    return view('delete-lesson');
+});
+
+Route::get('add-group', function () {
+    return view('add-group');
+});
+
+Route::get('edit-group', function () {
+    return view('edit-group');
+});
+
+Route::get('delete-group', function () {
+    return view('delete-group');
+});
+
+Route::get('add-project', function () {
+    return view('add-project');
+});
+
+Route::get('edit-project', function () {
+    return view('edit-project');
+});
+
+Route::get('delete-project', function () {
+    return view('delete-project');
+});
 
 //Admin
 Route::group(['middleware' => ['roles', 'auth']], function () {
