@@ -1211,6 +1211,21 @@ i.fa {
 	margin: 50px auto;
 	padding: 0 50px;
 	background: @dark-gray;
+	&.inside {
+		width: 500px;
+		margin: 50px 0;
+		padding: 0;
+		background: inherit;
+		input, .placeholder, label {
+			color: @dark-gray;
+		}
+		input {
+			border-bottom: 1px solid @dark-gray;
+			&:focus {
+				border-bottom: 1px solid @orange;
+			}
+		}
+	}
 	.fb {
 		margin-bottom: 35px;
 		&:hover {

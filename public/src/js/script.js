@@ -50,10 +50,10 @@ $(function(){
 
 
 	var dialogs = [
-		{ name: 'new_file', url: 'views/dialogs/register.html'},
+		{ name: 'new_file', title: 'Качи файл'},
       	{ name: 'login', title: 'Вход', url: 'views/dialogs/login.html'} 
     ];
-
+@include('includes.modals.register')
 
 	$(" .dialog.moveable ").draggable({
 		handle: ".dialog-title"
@@ -80,10 +80,12 @@ $(function(){
 
 
 	$("body").on("focusin", " .input ", function() {
-		var plw = $(this).siblings(" .placeholder ").width() + 10;
-		$(this).siblings(" .placeholder ").css("width", plw).animate({
-			left: (480 - plw)
-		}, 400, "easeOutBack");
+		if( !$(this).val() ) {
+			var plw = $(this).siblings(" .placeholder ").width() + 10;
+			$(this).siblings(" .placeholder ").css("width", plw).animate({
+				left: (480 - plw)
+			}, 400, "easeOutBack");
+		}
 	});
 	$("body").on("focusout", " .input ", function() {
 		if( !$(this).val() ) {

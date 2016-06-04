@@ -1155,6 +1155,23 @@ i.fa {
   padding: 0 50px;
   background: #2a2c2b;
 }
+.small-box.inside {
+  width: 500px;
+  margin: 50px 0;
+  padding: 0;
+  background: inherit;
+}
+.small-box.inside input,
+.small-box.inside .placeholder,
+.small-box.inside label {
+  color: #2a2c2b;
+}
+.small-box.inside input {
+  border-bottom: 1px solid #2a2c2b;
+}
+.small-box.inside input:focus {
+  border-bottom: 1px solid #ee7326;
+}
 .small-box .fb {
   margin-bottom: 35px;
 }
