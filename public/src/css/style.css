@@ -8,7 +8,7 @@
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
@@ -1152,7 +1152,7 @@ i.fa {
   width: 600px;
   position: relative;
   margin: 50px auto;
-  padding: 50px;
+  padding: 0 50px;
   background: #2a2c2b;
 }
 .small-box .fb {
@@ -1204,6 +1204,10 @@ a.return {
 }
 #landing .reg {
   margin: 0 auto;
+}
+#landing footer {
+  position: static;
+  padding-bottom: 10px;
 }
 /* **** RESPONSIVE **** */
 @media (min-width: 993px) and (max-width: 1600px) {

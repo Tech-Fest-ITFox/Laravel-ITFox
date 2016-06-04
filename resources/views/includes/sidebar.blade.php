@@ -11,9 +11,9 @@
             <ul class="navigation-holder">
                 <li class="nav-groups">
                     <ul class="side-nav">
-                        <li class="side-nav-items"><a href="/geeks" class="side-nav-link">Начало</a></li>
-                        <li class="side-nav-items"><a href="/nerds" class="side-nav-link">Уроци</a></li>
-                        <li class="side-nav-items"><a href="#" class="side-nav-link">Тестове</a></li>
+                        <li class="side-nav-items"><a href="/home" class="side-nav-link">Начало</a></li>
+                        <li class="side-nav-items"><a href="/lessons" class="side-nav-link">Уроци</a></li>
+                        <li class="side-nav-items"><a href="#" class="side-nav-link">Задачи</a></li>
                     </ul>
                 </li>
                 <!--

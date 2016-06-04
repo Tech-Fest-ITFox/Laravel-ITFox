@@ -7,18 +7,7 @@
 @section('content')
     <div class="small-box clearfix">
         <a href="#" class="btn fb">Регистрирай се чрез <b>Facebook</b></a>
-
         <h2>или</h2>
-
-        <div class="levels two">
-            <div class="level-bar">
-                <div class="level-bar-progress first"></div>
-            </div>
-            <ul class="level-labels">
-                <li class="activated">бърза регистрация</li>
-                <li>допълнителни данни</li>
-            </ul>
-        </div>
         <form name="regForm" action="{{ url('register') }}" role="form" method="post">
             {!! csrf_field() !!}
             <div class="input-holder form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -64,6 +53,50 @@
                 @if ($errors->has('password_confirmation'))
                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                @endif
+            </div>
+            <div class="input-holder form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+                <input type="text" name="city" class="input" required/>
+
+                <div class="placeholder">Град</div>
+                <div class="err">Въведи град</div>
+                @if ($errors->has('city'))
+                    <span class="help-block">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                @endif
+            </div>
+            <div class="input-holder form-group{{ $errors->has('school') ? ' has-error' : '' }}">
+                <input type="text" name="school" class="input" required/>
+
+                <div class="placeholder">Училище</div>
+                <div class="err">Въведи училище</div>
+                @if ($errors->has('school'))
+                    <span class="help-block">
+                                        <strong>{{ $errors->first('school') }}</strong>
+                                    </span>
+                @endif
+            </div>
+            <div class="input-holder form-group{{ $errors->has('grade') ? ' has-error' : '' }}">
+                <input type="number" name="grade" class="input" required/>
+
+                <div class="placeholder">Клас</div>
+                <div class="err">Въведи клас</div>
+                @if ($errors->has('grade'))
+                    <span class="help-block">
+                                        <strong>{{ $errors->first('grade') }}</strong>
+                                    </span>
+                @endif
+            </div>
+            <div class="input-holder form-group{{ $errors->has('class') ? ' has-error' : '' }}">
+                <input type="text" name="class" class="input" required/>
+
+                <div class="placeholder">Паралелка</div>
+                <div class="err">Въведи паралелка</div>
+                @if ($errors->has('class'))
+                    <span class="help-block">
+                                        <strong>{{ $errors->first('class') }}</strong>
                                     </span>
                 @endif
             </div>

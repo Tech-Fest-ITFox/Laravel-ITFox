@@ -18,7 +18,7 @@
 <header>
     <a class="logo">ITFox</a>
 </header>
-<div id="wrapper">
+<div class="landing-content">
     @yield('content')
     @include('includes.footer')
 </div>

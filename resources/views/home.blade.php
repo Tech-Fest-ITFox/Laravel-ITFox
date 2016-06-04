@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    {{ $role }} {{ Auth::user()->name }} - Home
+    {{ Auth::user()->name }} - Начало
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
                         e-mail: <a href="#">{{ Auth::user()->email }}</a> <br><br>
                         <!-- учител по ИТ: <a href="#">Спаска Ангелова</a> -->
                     </p>
-				<a href="edit-user" class="btn">Промени информацията</a>
+				<a href="/edit-user" class="btn">Промени информацията</a>
                     @else
                     <p>
                         Имате незавършен профил. <br>

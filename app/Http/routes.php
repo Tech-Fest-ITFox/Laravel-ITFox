@@ -39,9 +39,13 @@ Route::group(['middleware' => ['roles', 'auth']], function () {
         return view('lesson');
     });
 
+
 });
 
 
+Route::get('edit-user', function () {
+    return view('edit-user');
+});
 
 
 //Admin
